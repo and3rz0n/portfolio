@@ -158,61 +158,72 @@ export const Hero: React.FC = () => {
                     <span className="text-slate-100">resumen_indicadores --estado=activo</span>
                   </div>
 
-                  {/* Operational Metric 1: Montacargas & Baterías */}
-                  <div className="p-3 rounded-lg bg-brand-card/90 border border-brand-border/70 flex items-start justify-between">
+                  {/* Metric 1: Data Mart Tesis UCV - Velocidad de Datos */}
+                  <div className="p-2.5 sm:p-3 rounded-lg bg-brand-card/90 border border-brand-border/70 flex items-start justify-between">
                     <div>
-                      <span className="text-[11px] text-slate-400 block">Flota de Montacargas & Baterías</span>
-                      <span className="text-white font-bold text-sm">21 Bahías con Carga Inteligente</span>
+                      <span className="text-[11px] text-slate-400 block">Data Mart & BI — Tesis de Grado UCV</span>
+                      <span className="text-brand-cyan font-bold text-xs sm:text-sm">Consultas 52.1% más rápidas (70.4s ➔ 33.7s)</span>
                     </div>
-                    <span className="px-2 py-0.5 rounded bg-brand-emerald/15 text-brand-emerald text-[11px] border border-brand-emerald/30 font-semibold">
-                      ROTACIÓN ÓPTIMA
+                    <span className="px-2 py-0.5 rounded bg-brand-cyan/15 text-brand-cyan text-[10px] sm:text-[11px] border border-brand-cyan/30 font-semibold shrink-0 ml-2">
+                      p &lt; 0.05
                     </span>
                   </div>
 
-                  {/* Operational Metric 2: Consultas de datos */}
-                  <div className="p-3 rounded-lg bg-brand-card/90 border border-brand-border/70 flex items-start justify-between">
+                  {/* Metric 2: Control Presupuestal Tesis UCV - Precisión Financiera */}
+                  <div className="p-2.5 sm:p-3 rounded-lg bg-brand-card/90 border border-brand-border/70 flex items-start justify-between">
                     <div>
-                      <span className="text-[11px] text-slate-400 block">Data Mart & Analítica de Datos (Tesis)</span>
-                      <span className="text-brand-cyan font-bold text-sm">Consultas 52% más rápidas (70s ➔ 33s)</span>
+                      <span className="text-[11px] text-slate-400 block">Control Presupuestal de Obras — Tesis UCV</span>
+                      <span className="text-brand-emerald font-bold text-xs sm:text-sm">Error reducido de 23.7% a 2.28% (RAE)</span>
                     </div>
-                    <span className="px-2 py-0.5 rounded bg-brand-cyan/15 text-brand-cyan text-[11px] border border-brand-cyan/30 font-semibold">
-                      EFICIENCIA
-                    </span>
-                  </div>
-
-                  {/* Operational Metric 3: Control de costos */}
-                  <div className="p-3 rounded-lg bg-brand-card/90 border border-brand-border/70 flex items-start justify-between">
-                    <div>
-                      <span className="text-[11px] text-slate-400 block">Control de Costos y Presupuestos</span>
-                      <span className="text-brand-emerald font-bold text-sm">Margen de error reducido al 2.3%</span>
-                    </div>
-                    <span className="px-2 py-0.5 rounded bg-brand-emerald/15 text-brand-emerald text-[11px] border border-brand-emerald/30 font-semibold">
+                    <span className="px-2 py-0.5 rounded bg-brand-emerald/15 text-brand-emerald text-[10px] sm:text-[11px] border border-brand-emerald/30 font-semibold shrink-0 ml-2">
                       ALTA PRECISIÓN
                     </span>
                   </div>
 
+                  {/* Metric 3: Portal Operativo Softys - 12 Módulos en Planta */}
+                  <div className="p-2.5 sm:p-3 rounded-lg bg-brand-card/90 border border-brand-border/70 flex items-start justify-between">
+                    <div>
+                      <span className="text-[11px] text-slate-400 block">Portal Operativo de Planta — Softys Perú</span>
+                      <span className="text-white font-bold text-xs sm:text-sm">12 módulos en producción (TPM por voz, Asistencia SAP)</span>
+                    </div>
+                    <span className="px-2 py-0.5 rounded bg-sky-500/15 text-sky-300 text-[10px] sm:text-[11px] border border-sky-500/30 font-semibold shrink-0 ml-2">
+                      PLANTA INDUSTRIAL
+                    </span>
+                  </div>
+
+                  {/* Metric 4: Auditoría de Fletes y Descuentos */}
+                  <div className="p-2.5 sm:p-3 rounded-lg bg-brand-card/90 border border-brand-border/70 flex items-start justify-between">
+                    <div>
+                      <span className="text-[11px] text-slate-400 block">Liquidación de Fletes & Descuentos — Softys Perú</span>
+                      <span className="text-brand-emerald font-bold text-xs sm:text-sm">Cálculo de penalidades diario 100% digital</span>
+                    </div>
+                    <span className="px-2 py-0.5 rounded bg-brand-emerald/15 text-brand-emerald text-[10px] sm:text-[11px] border border-brand-emerald/30 font-semibold shrink-0 ml-2">
+                      AUTOMATIZADO
+                    </span>
+                  </div>
+
                   {/* Active Services Status in clear language */}
-                  <div className="pt-2 text-[11px] text-slate-400 space-y-1.5">
+                  <div className="pt-1.5 text-[11px] text-slate-400 space-y-1.5">
                     <div className="flex items-center justify-between">
                       <span className="flex items-center gap-1.5">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-brand-emerald" />
-                        <span>Conexión directa con ERP SAP</span>
+                        <CheckCircle2 className="w-3.5 h-3.5 text-brand-emerald shrink-0" />
+                        <span>Conexión directa con ERP SAP (Python/VBScript)</span>
                       </span>
-                      <span className="text-slate-400">ACTIVO</span>
+                      <span className="text-slate-400 font-mono">ACTIVO</span>
                     </div>
                     <div className="flex items-center justify-between">
                       <span className="flex items-center gap-1.5">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-brand-emerald" />
-                        <span>Simulación 3D de cubicaje en pallets</span>
+                        <CheckCircle2 className="w-3.5 h-3.5 text-brand-emerald shrink-0" />
+                        <span>Simulador 3D interactivo de cubicaje de carga</span>
                       </span>
-                      <span className="text-slate-400">THREE.JS</span>
+                      <span className="text-slate-400 font-mono">THREE.JS</span>
                     </div>
                     <div className="flex items-center justify-between">
                       <span className="flex items-center gap-1.5">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-brand-emerald" />
-                        <span>Inspecciones de maquinaria 100% digital</span>
+                        <CheckCircle2 className="w-3.5 h-3.5 text-brand-emerald shrink-0" />
+                        <span>SLA liquidación de gastos de transporte</span>
                       </span>
-                      <span className="text-slate-400">SIN PAPEL</span>
+                      <span className="text-brand-emerald font-mono">&le; 7 DÍAS</span>
                     </div>
                   </div>
 
