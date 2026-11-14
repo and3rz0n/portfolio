@@ -6,13 +6,24 @@
   html {
     font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
     color-scheme: dark;
+    overflow-x: clip;
+    -webkit-text-size-adjust: 100%;
   }
 
   body {
     background-color: #090D16;
     color: #F8FAFC;
-    overflow-x: hidden;
+    overflow-x: clip;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
+}
+
+/* Hardware Acceleration Helpers */
+.gpu-layer {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
 
 /* Custom Scrollbars */
@@ -35,6 +46,15 @@
   background: #334155;
 }
 
+/* Lightweight CSS Gradient Background (Zero GPU blur penalty) */
+.hero-glow-cyan {
+  background: radial-gradient(circle at 50% 30%, rgba(14, 165, 233, 0.12) 0%, transparent 65%);
+}
+
+.hero-glow-emerald {
+  background: radial-gradient(circle at 75% 40%, rgba(16, 185, 129, 0.10) 0%, transparent 60%);
+}
+
 /* Subtle Grid Background Pattern */
 .bg-grid-pattern {
   background-size: 36px 36px;
@@ -48,21 +68,21 @@
   background-size: 24px 24px;
 }
 
-/* Glassmorphism helpers */
+/* Mobile-friendly Glassmorphism */
 .glass-panel {
-  background: rgba(14, 21, 38, 0.7);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  background: rgba(14, 21, 38, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .glass-card {
-  background: rgba(17, 26, 46, 0.65);
+  background: rgba(17, 26, 46, 0.75);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.07);
 }
 
 .glass-card:hover {
-  border-color: rgba(14, 165, 233, 0.35);
+  border-color: rgba(14, 165, 233, 0.4);
 }

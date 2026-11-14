@@ -5,43 +5,29 @@ import { motion } from 'framer-motion';
 
 export const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-[90vh] pt-32 pb-20 flex items-center justify-center overflow-hidden">
-      {/* Background radial gradients */}
-      <motion.div 
-        animate={{ 
-          scale: [1, 1.1, 1],
-          opacity: [0.12, 0.18, 0.12]
-        }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[380px] bg-brand-cyan/15 blur-[140px] rounded-full pointer-events-none" 
-      />
-      <motion.div 
-        animate={{ 
-          scale: [1, 1.15, 1],
-          opacity: [0.1, 0.16, 0.1]
-        }}
-        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-        className="absolute top-1/3 right-1/4 w-[450px] h-[350px] bg-brand-emerald/15 blur-[150px] rounded-full pointer-events-none" 
-      />
-      <div className="absolute inset-0 bg-grid-pattern opacity-40 pointer-events-none" />
+    <section className="relative min-h-[100svh] pt-28 sm:pt-36 pb-16 sm:pb-24 flex items-center justify-center overflow-hidden">
+      {/* Background ambient lighting - Ultra-optimized CSS radial gradients (Zero GPU blur penalty) */}
+      <div className="absolute inset-0 hero-glow-cyan pointer-events-none" />
+      <div className="absolute inset-0 hero-glow-emerald pointer-events-none" />
+      <div className="absolute inset-0 bg-grid-pattern opacity-30 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
           
           {/* Left Column: Headline & Value Proposition */}
           <motion.div 
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
             className="lg:col-span-7 flex flex-col items-start text-left"
           >
             
             {/* Top Pill / Role Badge */}
             <motion.div 
-              initial={{ opacity: 0, y: -10 }}
+              initial={{ opacity: 0, y: -8 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-surface/90 border border-brand-border text-xs font-mono text-brand-cyan mb-6 shadow-sm"
+              transition={{ delay: 0.1, duration: 0.4 }}
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-surface/90 border border-brand-border text-xs font-mono text-brand-cyan mb-5 shadow-sm"
             >
               <span className="flex h-2 w-2 relative">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-cyan opacity-75"></span>
@@ -135,19 +121,19 @@ export const Hero: React.FC = () => {
 
           </motion.div>
 
-          {/* Right Column: Industrial System Terminal Preview with gentle hover animation */}
+          {/* Right Column: Industrial System Terminal Preview */}
           <motion.div 
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
-            className="lg:col-span-5 w-full"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.15, ease: "easeOut" }}
+            className="lg:col-span-5 w-full gpu-layer"
           >
             <div className="relative mx-auto max-w-lg lg:max-w-none">
               
-              {/* Outer decorative card frame with neon glow */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-brand-cyan/25 to-brand-emerald/25 rounded-2xl blur-lg opacity-60"></div>
+              {/* Outer decorative card frame without GPU-heavy blur */}
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-brand-cyan/30 to-brand-emerald/30 rounded-2xl opacity-50 pointer-events-none"></div>
               
-              <div className="relative rounded-2xl bg-brand-surface border border-brand-border shadow-2xl overflow-hidden">
+              <div className="relative rounded-2xl bg-brand-surface border border-brand-border shadow-xl overflow-hidden">
                 
                 {/* Terminal Header */}
                 <div className="px-4 py-3 bg-brand-card border-b border-brand-border flex items-center justify-between">

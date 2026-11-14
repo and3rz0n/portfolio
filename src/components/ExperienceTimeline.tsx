@@ -16,10 +16,10 @@ export const ExperienceTimeline: React.FC = () => {
         
         {/* Section Header */}
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          viewport={{ once: true, margin: "200px 0px" }}
+          transition={{ duration: 0.4 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-surface border border-brand-border text-xs font-mono text-brand-emerald mb-4">
@@ -51,10 +51,10 @@ export const ExperienceTimeline: React.FC = () => {
               {WORK_EXPERIENCE.map((exp, index) => (
                 <motion.div 
                   key={index} 
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                  initial={{ opacity: 0, y: 15 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "200px 0px" }}
+                  transition={{ duration: 0.35, delay: index * 0.05 }}
                   className="relative group"
                 >
                   {/* Timeline Dot */}
@@ -115,10 +115,10 @@ export const ExperienceTimeline: React.FC = () => {
               {EDUCATION.map((edu, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4 }}
+                  initial={{ opacity: 0, y: 15 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "200px 0px" }}
+                  transition={{ duration: 0.35 }}
                   className="p-7 rounded-2xl bg-brand-surface/80 border border-brand-border/80 shadow-card"
                 >
                   <div className="flex items-center justify-between mb-2">
@@ -179,10 +179,10 @@ export const ExperienceTimeline: React.FC = () => {
 
         {/* Bottom Block: Certifications & Continuous Learning (Full Width - ZERO SCROLLBAR) */}
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          viewport={{ once: true, margin: "200px 0px" }}
+          transition={{ duration: 0.4 }}
           className="pt-10 border-t border-brand-border/60"
         >
           {/* Header of Certifications */}

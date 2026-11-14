@@ -27,10 +27,10 @@ export const ProjectsSection: React.FC = () => {
         
         {/* Section Header */}
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          viewport={{ once: true, margin: "200px 0px" }}
+          transition={{ duration: 0.4 }}
           className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6"
         >
           <div>

@@ -23,10 +23,10 @@ export const CorePillars: React.FC = () => {
         
         {/* Section Header */}
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          viewport={{ once: true, margin: "200px 0px" }}
+          transition={{ duration: 0.4 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-surface border border-brand-border text-xs font-mono text-brand-cyan mb-4">
@@ -45,10 +45,10 @@ export const CorePillars: React.FC = () => {
           {CORE_PILLARS.map((pillar, index) => (
             <motion.div
               key={pillar.id}
-              initial={{ opacity: 0, y: 25 }}
+              initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.15 }}
+              viewport={{ once: true, margin: "200px 0px" }}
+              transition={{ duration: 0.35, delay: index * 0.08 }}
               whileHover={{ y: -6, transition: { duration: 0.2 } }}
               className="relative rounded-2xl bg-brand-surface/70 border border-brand-border/80 p-8 flex flex-col justify-between hover:border-slate-500 hover:bg-brand-card/90 transition-all duration-300 group shadow-card"
             >

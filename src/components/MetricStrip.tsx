@@ -41,10 +41,10 @@ export const MetricStrip: React.FC = () => {
           {METRICS.map((metric, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
+              viewport={{ once: true, margin: "200px 0px" }}
+              transition={{ duration: 0.35, delay: index * 0.05 }}
               whileHover={{ y: -4 }}
               className={`p-6 rounded-2xl bg-brand-card/70 border border-brand-border/80 transition-all duration-300 group shadow-card ${getBorderColor(metric.color)}`}
             >
